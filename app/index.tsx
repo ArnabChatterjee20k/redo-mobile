@@ -6,10 +6,11 @@ import {PaperProvider} from "react-native-paper"
 import Interests from "./interests/index"
 import SignUp from "./auth/signup/index"
 import Gender from "./auth/gender/index"
+import Remoji from "./auth/remoji/index"
 export default function App() {
   return (
     <PaperProvider>
-      <Gender/>
+      <Remoji/>
     </PaperProvider>
 
   );
