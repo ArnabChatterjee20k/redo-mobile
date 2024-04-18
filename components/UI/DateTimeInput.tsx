@@ -29,6 +29,7 @@ const DateTimeInput = ({ onChange }: { onChange: (date: Date) => void }) => {
         mode="outlined"
         placeholder="Pick Your Date of birth"
         outlineStyle={{ borderColor: "gray", borderRadius: 15 }}
+        showSoftInputOnFocus={false}
         onTouchStart={showDatePicker}
         style={{ marginBottom: 12 }}
         activeOutlineColor={"black"}
