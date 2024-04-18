@@ -4,12 +4,12 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Link } from 'expo-router';
 import {PaperProvider} from "react-native-paper"
 import Interests from "./interests/index"
-import { SafeAreaView } from 'react-native-safe-area-context';
+import Login from "./auth/login/index"
 
 export default function App() {
   return (
     <PaperProvider>
-      <Interests/>
+      <Login/>
     </PaperProvider>
 
   );
