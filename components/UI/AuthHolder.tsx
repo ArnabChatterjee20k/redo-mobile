@@ -2,13 +2,13 @@ import React, {
   createContext,
   useContext,
   useEffect,
-  useRef,
   useState,
 } from "react";
 import GradientCircle from "../UI/GradientCircle";
 import colors from "../../constants/colors";
-import { Dimensions, Keyboard, Text, View } from "react-native";
-
+import { Dimensions, Image, Keyboard, Text, View } from "react-native";
+import { TextInput } from "react-native-paper";
+import Logo from "../../assets/logo.png"
 interface IAuthContext {
   KeyboardVisible: boolean;
 }
@@ -116,4 +116,38 @@ function LowerLeftCircle() {
       />
     </View>
   );
+}
+
+export function AuthInput({
+  onChange,
+  label,
+  placeholder,
+  isPassword,
+}) {
+  return (
+    <TextInput
+      label={label}
+      mode="outlined"
+      secureTextEntry={isPassword}
+      placeholder={placeholder}
+      outlineStyle={{ borderColor: "gray", borderRadius: 15 }}
+      style={{ marginBottom: 12 }}
+      activeOutlineColor={"black"}
+      onChangeText={onChange}
+      textColor="black"
+    />
+  );
+}
+
+
+export function AuthLogo(){
+  const {KeyboardVisible} = useAuthContext()
+  return <Image
+        style={{
+          objectFit: "cover",
+          width: KeyboardVisible ? 200 : 300,
+          height: KeyboardVisible ? 50 : 300,
+        }}
+        source={Logo}
+      />
 }

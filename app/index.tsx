@@ -4,12 +4,12 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Link } from 'expo-router';
 import {PaperProvider} from "react-native-paper"
 import Interests from "./interests/index"
-import Login from "./auth/login/index"
+import SignUp from "./auth/signup/index"
 
 export default function App() {
   return (
     <PaperProvider>
-      <Login/>
+      <SignUp/>
     </PaperProvider>
 
   );
